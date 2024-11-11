@@ -1,4 +1,10 @@
 /* NAVBAR */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
 .navbar-brand {
     position: relative;
 }
@@ -87,7 +93,7 @@
 #main-container {
     background-color: #000;
     color: #FFF;
-    min-height: 65vh;
+    min-height: 80vh;
     padding: 40px;
 }
 
@@ -121,6 +127,12 @@
     background-color: #f4c518;
     border: 2px solid #f4c518;
     width: 100%;
+}
+
+.card-btn:hover {
+    background-color: transparent;
+    color: #f4c518;
+    border-color: #f4c518;
 }
 
 /* FOOTER */
