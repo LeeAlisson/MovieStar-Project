@@ -31,7 +31,21 @@
                 // Verificar se o e-mail já está cadastrado
                 if($userDao->findByEmail($email) === false) {
 
-                    
+                    $user = new User();
+
+                    // Criação de token / senha
+                    $userToken = $user->generateToken();
+                    $finalPassoword = $user->generatePassword($password);
+
+                    $user->name = $name;
+                    $user->lastname = $lastname;
+                    $user->email = $email;
+                    $user->password = $finalPassoword;
+                    $user->token = $userToken;
+
+                    $auth = true;
+
+                    $userDao->create($user, $auth);
 
                 } else {
 

@@ -1,4 +1,10 @@
 /* NAVBAR */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
 .navbar-brand {
     position: relative;
 }
@@ -87,7 +93,7 @@
 #main-container {
     background-color: #000;
     color: #FFF;
-    min-height: 65vh;
+    min-height: 80vh;
     padding: 40px;
 }
 
