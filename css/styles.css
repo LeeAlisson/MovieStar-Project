@@ -135,6 +135,12 @@ body, html {
     border-color: #f4c518;
 }
 
+/* EDIT PROFILE */
+
+#editprofile-container form input {
+    margin-bottom: 15px;
+}
+
 /* FOOTER */
 #footer {
     background-color: #000;

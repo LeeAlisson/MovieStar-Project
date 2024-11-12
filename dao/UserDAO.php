@@ -118,7 +118,7 @@
             if($user) {
 
                 // Checar se as senhas batem
-                if($password_verify($password, $user->password)) {
+                if(password_verify($password, $user->password)) {
 
                     // Gerar um token e inserir na session
                     $token = $user->generateToken();
@@ -196,7 +196,7 @@
             $_SESSION["token"] = "";
 
             // Redirecionar e apresentar mensagem de sucesso
-            $this->setMessage("Você fez o logout com sucesso!", "success", "index.php");
+            $this->message->setMessage("Você fez o logout com sucesso!", "success", "index.php");
 
         }
 
