@@ -97,6 +97,78 @@ body, html {
     padding: 40px;
 }
 
+.section-title {
+    font-size: 24px;
+    border-left: 4px solid #f5c518;
+    padding-left: 12px;
+    margin-top: 20px;
+}
+
+.section-description {
+    color: #CCC;
+    font-size: 18px;
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.movie-card {
+    background-color: #1a1a1a;
+    width: 18%;
+    margin-bottom: 30px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.movie-card .card-img-top {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title {
+    height: 3rem;
+}
+
+.card-title a {
+    font-size: 16px;
+    color: #FFF;
+}
+
+.fas.fa-star {
+    color: #f5c518;
+}
+
+.rating {
+    color: #ccc;
+}
+
+.rate-btn {
+    margin-bottom: 15px;
+    color: #5799ef;
+    background-color: #333;
+    border-color: #333;
+    width: 100%;
+    font-weight: bold;
+}
+
+.rate-btn:hover {
+    color: #7daeee;
+    background-color: #444;
+    border-color: #444;
+}
+
+.empty-list {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+}
+
 /* Login / Register */
 #auth-row {
     justify-content: space-evenly;
@@ -119,7 +191,7 @@ body, html {
 
 #login-container form input,
 #register-container form input {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card-btn {
@@ -136,9 +208,69 @@ body, html {
 }
 
 /* EDIT PROFILE */
-
 #editprofile-container form input {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#profile-image-container {
+    width: 150px;
+    height: 150px;
+    border: 6px solid #f5c518;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    margin: 15px auto;
+}
+
+.image-area {
+    margin-left: 30px;
+}
+
+.page-description {
+    color: #999;
+}
+
+#bio {
+    max-width: 400px;
+}
+
+.form-control.disable {
+    background-color: #ccc;
+}
+
+#change-password-container {
+    margin-top: 50px;
+}
+
+/* NEW MOVIE */
+.new-movie-container form input,
+.new-movie-container form select,
+.new-movie-container form textarea {
+    margin-bottom: 20px;
+}
+
+.new-movie-container {
+    text-align: center;
+}
+
+#add-movie-form {
+    text-align: left;
+}
+
+.movie-image-container {
+    height: 400px;
+    min-width: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.page-title:after {
+    content: "";
+    width: 300px;
+    border-bottom: 2px solid #f5c518;
+    display: block;
+    margin: 0 auto;
+    padding-top: 7px;
 }
 
 /* FOOTER */
