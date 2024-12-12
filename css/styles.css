@@ -212,7 +212,8 @@ body, html {
     margin-bottom: 20px;
 }
 
-#profile-image-container {
+#profile-image-container,
+.profile-image-container {
     width: 150px;
     height: 150px;
     border: 6px solid #f5c518;
@@ -220,6 +221,11 @@ body, html {
     background-size: cover;
     background-position: center;
     margin: 15px auto;
+}
+
+.profile-image-container {
+    width: 70px;
+    height: 70px;
 }
 
 .image-area {
@@ -240,6 +246,51 @@ body, html {
 
 #change-password-container {
     margin-top: 50px;
+}
+
+/* PROFILE */
+.profile-container {
+    justify-content: center;
+}
+
+.profile-container .profile-image {
+    margin: 20px auto;
+}
+
+.about-title {
+    color: #ccc;
+}
+
+.profile-description {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.added-movies-container,
+.about-container {
+    padding-top: 20px;
+}
+
+.added-movies-container {
+    background-color: #333;
+}
+
+.added-movies-container .movies-container {
+    padding: 20px;
+}
+
+.added-movies-container h3 {
+    margin-bottom: 20px;
+}
+
+.added-movies-container .movie-card {
+    width: 31%;
+}
+
+.about-container {
+    text-align: center;
+    background-color: #333;
+    border-bottom: 3px solid #ccc;
 }
 
 /* NEW MOVIE */
@@ -278,20 +329,83 @@ body, html {
     padding-top: 7px;
 }
 
+/* MOVIE */
+.movie-container {
+    text-align: center;
+}
+
+.movie-details {
+    margin: 25px 0;
+}
+
+.pipe {
+    border: 1px solid #333;
+    margin: 0 10px;
+}
+
+#review-form .card-btn,
+#edit-movie-form .card-btn {
+    width: auto;
+    margin-top: 10px;
+}
+
+#review-form label {
+    margin-bottom: 5px;
+}
+
+#reviews-title {
+    margin-bottom: 25px;
+}
+
+#review-form-container {
+    background-color: #333;
+    padding: 20px;
+}
+
+#review-form-container select,
+#review-form-container textarea {
+    width: 50%;
+}
+
+#reviews-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 4px solid #f5c518;
+}
+
+.review {
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.author-details-container {
+    padding-top: 20px;
+    white-space: nowrap;
+}
+
+.author-name a {
+    color: #f5c518;
+    text-decoration: none;
+}
+
+.comment-title {
+    color: #999;
+}
+
 /* DASHBOARD */
 #add-movie-container {
     text-align: right;
 }
 
-#movies-dashboard .table {
+#movies-dashboard .table-dark {
     color: #FFF;
 }
 
-#movies-dashboard .table th {
+#movies-dashboard .table-dark th {
     border-top: none;
 }
 
-#movies-dashboard .table tr {
+#movies-dashboard .table-dark tr {
     padding: 15px 0;
 }
 
@@ -347,6 +461,15 @@ body, html {
     color:#DC3545;
     text-decoration: none;
 }
+
+/* EDIT MOVIE */
+#edit-movie-form input,
+#edit-movie-form div label,
+#edit-movie-form div textarea,
+#edit-movie-form div select {
+    margin-bottom: 10px;
+}
+
 
 /* FOOTER */
 #footer {

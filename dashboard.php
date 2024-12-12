@@ -5,11 +5,14 @@
     // Verifica se o usuário está autenticado
     require_once "models/User.php";
     require_once "dao/UserDAO.php";
+    require_once "dao/MovieDAO.php";
 
     $user = new User();
     $userDao = new UserDAO($conn, $BASE_URL);
+    $movieDao = new MovieDao($conn, $BASE_URL);
 
     $userData = $userDao->verifyToken(true);
+    $userMovies = $movieDao->getMoviesByUserId($userData->id);
 
 ?>
 <div id="main-container" class="container-fluid">
@@ -22,28 +25,32 @@
     </div>
     <div class="col-md-12" id="movies-dashboard">
         <table class="table">
-            <thead>
+            <thead class="table-dark">
                 <th scope="col">#</th>
                 <th scope="col">Título</th>
                 <th scope="col">Nota</th>
                 <th scope="col" class="actions-column">Ações</th>
             </thead>
             <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td><a href="#" class="table-movie-title">Título</a></td>
-                    <td><i class="fas fa-star"></i>9</td>
+                <?php foreach($userMovies as $movie): ?>
+                <tr class="table-dark">
+                    <td scope="row"><?= $movie->id ?></td>
+                    <td><a href="<?= $BASE_URL ?>movie.php?id=<?= $movie->id ?>" class="table-movie-title"><?= $movie->title ?></a></td>
+                    <td><i class="fas fa-star"></i> 9</td>
                     <td class="actions-column">
-                        <a href="#" class="edit-btn">
+                        <a href="<?= $BASE_URL ?>editmovie.php?id=<?= $movie->id ?>" class="edit-btn">
                             <i class="far fa-edit"></i> Editar
                         </a>
-                        <form action="">
+                        <form action="<?= $BASE_URL ?>movie_process.php" method="POST">
+                            <input type="hidden" name="type" value="delete">
+                            <input type="hidden" name="id" value="<?= $movie->id ?>">
                             <button type="submit" class="delete-btn">
                                 <i class="fas fa-times"></i> Deletar
                             </button>
                         </form>
                     </td>
                 </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
