@@ -17,9 +17,9 @@
             <div class="profile-image-container review-image" style="background-image: url('<?= $BASE_URL ?>img/users/<?= $review->user->image ?>')"></div>
             <div class="col-md-9 author-details-container">
                 <h4 class="author-name">
-                    <a href="#"></a>
+                    <a href="<?= $BASE_URL ?>profile.php?id=<?= $review->user->id ?>"><?= $fullName ?></a>
                 </h4>
-                <p><i class="fas fa-star"></i> <?= $fullName ?></p>
+                <p><i class="fas fa-star"></i> <?= $movie->rating ?></p>
             </div>
             <div class="col-md-12 author-details-container">
                 <p class="comments-title">Comentário:</p>

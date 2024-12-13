@@ -120,6 +120,8 @@
                 $rating = "Não avaliado";
             }
 
+            return $rating;
+
         }
 
     }

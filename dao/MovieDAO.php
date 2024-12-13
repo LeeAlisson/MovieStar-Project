@@ -34,6 +34,10 @@
             // Recebe as notas do filme
             $reviewDao = new ReviewDAO($this->conn,$this->url);
 
+            $rating = $reviewDao->getRating($movie->id);
+
+            $movie->rating = $rating;
+
             return $movie;
 
         }
@@ -128,6 +132,24 @@
         }
 
         public function findByTitle($title) {
+
+            $movies = [];
+
+            $stmt = $this->conn->prepare("SELECT * FROM movies WHERE title LIKE :title");
+            $stmt->bindValue(":title", '%'.$title.'%');
+            $stmt->execute();
+
+            if($stmt->rowCount() > 0) {
+
+                $moviesArray = $stmt->fetchAll();
+
+                foreach($moviesArray as $movie) {
+                    $movies[] = $this->buildMovie($movie);
+                }
+
+            }
+            
+            return $movies;
 
         }
 

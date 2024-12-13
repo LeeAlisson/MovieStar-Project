@@ -45,7 +45,7 @@ if ($userData->image == "") {
                     <div class="form-group">
                         <input type="file" class="form-control-file" name="image">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group bio-user">
                         <label for="bio">Sobre você:</label>
                         <textarea class="form-control" name="bio" id="bio" rows="4"
                             placeholder="Conte quem você é, o que faz e onde trabalha..."><?= $userData->bio ?></textarea>
